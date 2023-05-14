@@ -17,6 +17,7 @@ public class DBUtil {
         config.setJdbcUrl("jdbc:mysql://1.12.249.127:3306/javaee_mall");
         config.setUsername("drs");
         config.setPassword("123456");
+        config.setDriverClassName("com.mysql.cj.jdbc.Driver");
         config.addDataSourceProperty("cachePrepStmts", "true");
         config.addDataSourceProperty("prepStmtCacheSize", "250");
         config.addDataSourceProperty("prepStmtCacheSqlLimit", "2048");
