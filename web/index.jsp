@@ -1,3 +1,4 @@
+
 <%--
   Created by IntelliJ IDEA.
   User: Jasmine-drs
@@ -5,6 +6,7 @@
   Time: 9:05
 --%>
 <%@ page contentType="text/html;charset=UTF-8" %>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +14,7 @@
     <title>首页</title>
     <%--引入css--%>
     <link rel="stylesheet" type="text/css" href="static/css/index.css">
+    <link rel="stylesheet" type="text/css" href="static/css/common.css">
     <%--引入js--%>
     <link rel="stylesheet" href="static/js/bootstrap-5.3.0-alpha3-dist/css/bootstrap.min.css">
     <script src="static/js/bootstrap-5.3.0-alpha3-dist/js/bootstrap.min.js"></script>
@@ -19,7 +22,14 @@
 </head>
 <body>
 <h1>数码购物商城</h1>
-
+<!-- 用户头像 -->
+<div class="user-avatar">
+    ${sessionScope.user.name.substring(0, 1)}
+</div>
+<%--跳转登录页--%>
+<c:if test="${empty sessionScope.user}">
+    <a href="login.jsp">登录</a>
+</c:if>
 <!-- 商品种类菜单栏 -->
 <ul>
     <li><a href="client/category.jsp?category=1">电脑/配件</a></li>

@@ -3,7 +3,6 @@ package servlet;
 import bean.User;
 import dao.impl.UserDaoImpl;
 
-import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -18,7 +17,7 @@ import java.io.IOException;
 @WebServlet(name = "LoginServlet", urlPatterns = "/login")
 public class LoginServlet extends HttpServlet {
     @Override
-    protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+    protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.setCharacterEncoding("utf8");
         // 1. 获取请求参数
         String username = req.getParameter("username");
@@ -30,13 +29,16 @@ public class LoginServlet extends HttpServlet {
 
         // 2. 验证用户名和密码是否正确
         if (exist.getId() != null) {
-            req.setAttribute("user", exist);
+//            session域对象保存用户信息
+            req.getSession().setAttribute("user", exist);
             if (exist.getIdentity() == 1) {
-                // 3.1 如果正确，跳转到后台管理系统的首页
-                req.getRequestDispatcher("admin/console.jsp").forward(req, resp);
+                // 3.1 如果正确，重定向到后台管理系统的首页
+                resp.sendRedirect("admin/console.jsp");
+//                req.getRequestDispatcher("admin/console.jsp").forward(req, resp);
             } else {
-                // 3.2 如果正确，跳转到首页
-                req.getRequestDispatcher("index.jsp").forward(req, resp);
+                // 3.2 如果正确，重定向到首页
+                resp.sendRedirect("index.jsp");
+//                req.getRequestDispatcher("index.jsp").forward(req, resp);
             }
         } else {
             // 4. 如果不正确，跳转到登录页面，并提示错误信息
