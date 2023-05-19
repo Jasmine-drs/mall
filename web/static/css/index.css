@@ -1,21 +1,21 @@
-
+/* 全局样式 */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; /* 设置字体 */
 }
 
 h1 {
-    color: #333;
+    color: #333; /* 设置标题颜色 */
 }
 
 ul {
-    list-style-type: none;
+    list-style-type: none; /* 去除列表样式 */
     margin: 0;
     padding: 0;
 }
 
 li {
     display: inline-block;
-    margin-right: 10px;
+    margin-right: 10px; /* 设置列表项间距 */
 }
 
 li a {
@@ -29,4 +29,21 @@ li a {
 
 li a:hover {
     background-color: #ccc;
+}
+
+/* 轮播图容器样式 */
+.carousel-inner {
+    width: 100px; /* 设置容器宽度为100% */
+    height: 400px; /* 设置容器高度 */
+    margin: 0 auto; /* 居中显示 */
+    /*overflow: hidden; !* 隐藏溢出部分 *!*/
+    /*object-fit: contain;*/
+}
+
+/* 轮播图样式 */
+.carousel-inner img {
+    width: 100px;
+    height: 100px;
+    transform: scale(1, 5); /* 缩放图像为原来的80% */
+    /*object-fit: contain; !* 将图像适应容器，不会裁剪 *!*/
 }

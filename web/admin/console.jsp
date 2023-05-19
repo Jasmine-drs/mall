@@ -28,7 +28,6 @@
         <li><a href="#">用户管理</a></li>
         <li><a href="#">库存管理</a></li>
         <li><a href="#">数据统计</a></li>
-        <li><a href="#">系统设置</a></li>
     </ul>
 </div>
 
