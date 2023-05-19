@@ -1,4 +1,4 @@
-package servlet.admin;
+package servlet;
 
 import bean.User;
 import dao.impl.UserDaoImpl;
@@ -15,25 +15,29 @@ import java.io.IOException;
  * @date 2023/5/14 10:21
  */
 
-@WebServlet(name = "AdminLoginServlet", urlPatterns = "/admin/login")
-public class AdminLoginServlet extends HttpServlet {
+@WebServlet(name = "LoginServlet", urlPatterns = "/login")
+public class LoginServlet extends HttpServlet {
     @Override
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf8");
         // 1. 获取请求参数
         String username = req.getParameter("username");
         String password = req.getParameter("password");
-        String identity = req.getParameter("identity");
 
         UserDaoImpl userDao = new UserDaoImpl();
-        User exist = userDao.isExist(username, password, identity);
+        User exist = userDao.isExist(username, password);
         System.out.println("exist = " + exist);
 
         // 2. 验证用户名和密码是否正确
         if (exist.getId() != null) {
             req.setAttribute("user", exist);
-            // 3. 如果正确，跳转到后台管理系统的首页
-            req.getRequestDispatcher("console.jsp").forward(req, resp);
+            if (exist.getIdentity() == 1) {
+                // 3.1 如果正确，跳转到后台管理系统的首页
+                req.getRequestDispatcher("admin/console.jsp").forward(req, resp);
+            } else {
+                // 3.2 如果正确，跳转到首页
+                req.getRequestDispatcher("index.jsp").forward(req, resp);
+            }
         } else {
             // 4. 如果不正确，跳转到登录页面，并提示错误信息
             resp.setContentType("text/html;charset=utf-8");

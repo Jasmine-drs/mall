@@ -9,15 +9,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>后台登录页面</title>
+    <title>登录页面</title>
 </head>
 <body>
-<h1>后台登录页面</h1>
+<h1>登录页面</h1>
 <%--登录表单--%>
-<form action="${pageContext.request.contextPath}/admin/login" method="post">
+<form action="${pageContext.request.contextPath}/login" method="post">
     <%--写在表格里面--%>
     <table>
-        <input type="hidden" name="identity" value="1">
         <tr>
             <td>用户名：</td>
             <td><input type="text" name="username" id="username" placeholder="请输入用户名"></td>

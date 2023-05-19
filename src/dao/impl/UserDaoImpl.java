@@ -16,11 +16,11 @@ import java.util.Map;
 
 public class UserDaoImpl implements UserDao {
     @Override
-    public User isExist(String username, String password, String identity) {
+    public User isExist(String username, String password) {
         System.out.println("UserDaoImpl.isExist");
-        String sql = "select *from user where account=? and password=? and identity=?";
+        String sql = "select *from user where account=? and password=?";
         System.out.println("sql = " + sql);
-        List<Map<String, Object>> query = DBUtil.query(sql, username, password, Integer.parseInt(identity));
+        List<Map<String, Object>> query = DBUtil.query(sql, username, password);
 //        封装对象
         User user = new User();
         if (query != null) {

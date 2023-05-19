@@ -17,5 +17,5 @@ public interface UserDao {
      * @param password 密码
      * @return 用户对象
      */
-    User isExist(String username, String password, String identity);
+    User isExist(String username, String password);
 }
