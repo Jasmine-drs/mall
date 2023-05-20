@@ -29,3 +29,22 @@ li a {
 li a:hover {
     background-color: #ccc;
 }
+
+.user-avatar {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.user-avatar:hover .dropdown-menu {
+    display: block;
+}
