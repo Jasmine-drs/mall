@@ -20,8 +20,11 @@
 </head>
 <body>
 <!-- 引入头部模块 -->
+<div>
 <jsp:include page="header.jsp" />
+</div>
 <!-- 商品种类菜单栏 -->
+<div>
 <ul>
     <li><a href="${pageContext.request.contextPath}/category/all?categoryId=1">电脑/配件</a></li>
     <li><a href="client/category.jsp?category=2">手机/配件</a></li>
@@ -29,6 +32,7 @@
     <li><a href="client/category.jsp?category=4">视频设备</a></li>
     <li><a href="client/category.jsp?category=5">家电产品</a></li>
 </ul>
+</div>
 <div class="container">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <ol class="carousel-indicators">
