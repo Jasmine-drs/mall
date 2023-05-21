@@ -53,7 +53,6 @@
 
 <%--TODO 搜索栏，根据商品分类、商品名进行搜索，开发完这个功能就把TODO删掉--%>
 <div class="second">
-    <h2>测试2</h2>
     <img src="static/image/logo.jpg" class="second-img">
     <div class="second-search">
         <form class="search-form" action="search.jsp" method="get">
