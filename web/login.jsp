@@ -9,26 +9,53 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>登录页面</title>
+    <title>商城登录注册页面</title>
+    <link rel="stylesheet" href="static/css/login.css">
 </head>
 <body>
-<h1>登录页面</h1>
-<%--登录表单--%>
-<form action="${pageContext.request.contextPath}/login" method="post">
-    <%--写在表格里面--%>
-    <table>
-        <tr>
-            <td>用户名：</td>
-            <td><input type="text" name="username" id="username" placeholder="请输入用户名"></td>
-        </tr>
-        <tr>
-            <td>密码：</td>
-            <td><input type="password" name="password" id="password" placeholder="请输入密码"></td>
-        </tr>
-        <tr>
-            <td colspan="2"><input type="submit" value="登录"></td>
-        </tr>
-    </table>
-</form>
+<div class="head">
+    <div class="shouye_head">
+    <a href="index.jsp">商城首页</a>
+    </div>
+</div>
+<section>
+    <!--登录-->
+    <div class="container">
+        <div class="user singinBx">
+            <div class="imgBx"><img src="static/image/1.jpg" alt=""></div>
+            <div class="formBx">
+                <form action="${pageContext.request.contextPath}/login" method="post">
+                    <h1>登录</h1>
+                    <input type="text" id="user_id" name="user_id" placeholder="帐号">
+                    <input type="password" id="password" name="password" placeholder="密码">
+                    <input type="submit" name="" value="登录">
+                    <p class="signup">没有账号？<a href="#" onclick="topggleForm();">注册</a></p>
+                </form>
+            </div>
+        </div>
+    <!--注册-->
+        <div class="user singupBx">
+            <div class="formBx">
+                <form action="${pageContext.request.contextPath}/login" method="post">
+                    <h1>注册</h1>
+                    <input type="text" id="username" name="username" placeholder="请输入用户名">
+                    <input type="password" id="pwd" name="password" placeholder="请输入密码">
+                    <input type="password" id="second-pwd" name="second-pwd" placeholder="请再次输入密码">
+                    <input type="text" id="phone" name="phone" placeholder="手机号码">
+                    <input type="text" id="address" name="address" placeholder="收货地址">
+                    <input type="submit" name="" value="注册">
+                    <p class="signup">已有账号？<a href="#" onclick="topggleForm();">登录</a></p>
+                </form>
+            </div>
+            <div class="imgBx"><img src="static/image/2.jpg" alt=""></div>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+    function topggleForm(){
+        var container=document.querySelector('.container');
+        container.classList.toggle('active');
+    }
+</script>
 </body>
 </html>
