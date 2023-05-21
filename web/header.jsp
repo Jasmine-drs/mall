@@ -29,18 +29,12 @@
 </div>
 <%--跳转登录页--%>
 <div class="top">
-    <ul>
-        <li>
-            <span class="top-c">中国大陆</span>
-            <span class="top-c-c">&nbsp|&nbsp</span>
-        </li>
-        <li class="top-login-sign">
-        <c:if test="${empty sessionScope.user}">
-            <a href="login.jsp" class="top-login">请登录</a>
-            <a href="#" class="top-sign">&nbsp请注册</a>
-        </c:if>
-        </li>
-    </ul>
+    <span class="top-c">中国大陆</span>
+    <span class="top-c-c">&nbsp|&nbsp</span>
+    <c:if test="${empty sessionScope.user}">
+        <a href="login.jsp" class="top-login">请登录</a>
+        <a href="#" class="top-sign">&nbsp请注册</a>
+    </c:if>
     <%--TODO 导航栏--%>
     <ul class="top-nav">
         <a href="index.jsp">首页</a><%--    可以搞个图标--%>
