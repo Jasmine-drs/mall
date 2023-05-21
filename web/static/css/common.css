@@ -1,6 +1,19 @@
+html,body{
+    width: 100%;
+    height: 100%;
+    background-color: #f4f4f4;
+    color: #3c3c3c;
+    overflow-x: hidden;
+}
+* {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
 .user-avatar {
     position: fixed;
-    top: 20px; /* 距离页面顶部的距离 */
+    top: 60px; /* 距离页面顶部的距离 */
     right: 20px; /* 距离页面右侧的距离 */
     display: inline-block;
     width: 40px;
@@ -11,4 +24,68 @@
     text-align: center;
     line-height: 40px;
     font-size: 20px;
+}
+.top{
+    width: 100%;
+    height: 50px;
+    background-color: rgba(115,178,201,0.36);
+    /*background-color: black;*/
+}
+.top-c{
+    float: left;
+    line-height: 50px;
+    margin-left: 50px;
+}
+.top-c-c{
+    float: left;
+    line-height: 50px;
+}
+.top-login-sign{
+    float: left;
+}
+.top-login {
+    float: left;
+    line-height: 50px;
+}
+.top-sign{
+    float: left;
+    line-height: 50px;
+}
+.top-nav{
+    float: right;
+    line-height: 50px;
+    margin-right: 50px;
+}
+.second{
+    width: 100%;
+    height: 150px;
+}
+.second-img{
+    float: left;
+    margin-left: 25%;
+    margin-top: 40px;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+.second-search{
+    float: left;
+    width: 600px;
+    height: 150px;
+}
+.keyword {
+    float: left;
+    margin-top: 60px;
+    height: 50px;
+    width: 400px;
+    line-height: 150px;
+    margin-left: 50px;
+}
+.btn{
+    float: left;
+    margin-top: 60px;
+    height: 50px;
+    width: 80px;
+    line-height: 50px;
+    margin-left: 20px;
 }

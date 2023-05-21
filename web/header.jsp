@@ -28,29 +28,38 @@
     </div>
 </div>
 <%--跳转登录页--%>
-<c:if test="${empty sessionScope.user}">
-    <a href="login.jsp">登录</a>
-</c:if>
+<div class="top">
+    <ul>
+        <li>
+            <span class="top-c">中国大陆</span>
+            <span class="top-c-c">&nbsp|&nbsp</span>
+        </li>
+        <li class="top-login-sign">
+        <c:if test="${empty sessionScope.user}">
+            <a href="login.jsp" class="top-login">请登录</a>
+            <a href="#" class="top-sign">&nbsp请注册</a>
+        </c:if>
+        </li>
+    </ul>
+    <%--TODO 导航栏--%>
+    <ul class="top-nav">
+        <a href="index.jsp">首页</a><%--    可以搞个图标--%>
+        <a href="client/cart.jsp">购物车</a>
+        <a href="client/order.jsp">订单</a>
+        <a href="client/user.jsp">个人中心</a>
+        <a href="client/#">退出登录</a><%--退出登录之后从后台跳转到首页--%>
+    </ul>
+</div>
 
 <%--TODO 搜索栏，根据商品分类、商品名进行搜索，开发完这个功能就把TODO删掉--%>
-<form class="search-form" action="search.jsp" method="get">
-    <input type="text" name="keyword" placeholder="搜索商品">
-    <button type="submit">搜索</button>
-</form>
-
-<%--TODO 导航栏--%>
-<div class="nav">
-    <a href="index.jsp">首页</a><%--    可以搞个图标--%>
-    <%--    <a href="client/category.jsp?category=1">电脑/配件</a>--%>
-    <%--    <a href="client/category.jsp?category=2">手机/配件</a>--%>
-    <%--    <a href="client/category.jsp?category=3">摄影器材</a>--%>
-    <%--    <a href="client/category.jsp?category=4">视频设备</a>--%>
-    <%--    <a href="client/category.jsp?category=5">家电产品</a>--%>
-    <%--    <a href="client/category.jsp?category=6">其他</a>--%>
-    <a href="client/cart.jsp">购物车</a>
-    <a href="client/order.jsp">订单</a>
-    <a href="client/user.jsp">个人中心</a>
-    <a href="client/#">退出登录</a><%--退出登录之后从后台跳转到首页--%>
+<div class="second">
+    <img src="static/image/logo.jpg" class="second-img">
+    <div class="second-search">
+        <form class="search-form" action="search.jsp" method="get">
+            <input type="text" name="keyword" placeholder="搜索商品" class="keyword" >
+            <button type="submit" class="btn">搜索</button>
+        </form>
+    </div>
 </div>
 </body>
 </html>
