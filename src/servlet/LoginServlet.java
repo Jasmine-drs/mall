@@ -20,11 +20,11 @@ public class LoginServlet extends HttpServlet {
     protected void service(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         req.setCharacterEncoding("utf8");
         // 1. 获取请求参数
-        String username = req.getParameter("username");
+        String user_id = req.getParameter("user_id");
         String password = req.getParameter("password");
 
         UserDaoImpl userDao = new UserDaoImpl();
-        User exist = userDao.isExist(username, password);
+        User exist = userDao.isExist(user_id, password);
         System.out.println("exist = " + exist);
 
         // 2. 验证用户名和密码是否正确
