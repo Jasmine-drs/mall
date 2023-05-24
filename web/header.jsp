@@ -22,9 +22,17 @@
     ${sessionScope.user.name.substring(0, 1)}
     <!-- 下拉菜单 -->
     <div class="dropdown-menu" id="dropdownMenu">
+<%--        <ul>--%>
+        <li>
         <a href="#">个人中心</a>
+        </li>
+        <li>
         <a href="#">修改密码</a>
+        </li>
+        <li>
         <a href="#">退出登录</a>
+        </li>
+<%--        </ul>--%>
     </div>
 </div>
 <%--跳转登录页--%>
@@ -32,12 +40,12 @@
     <span class="top-c">中国大陆</span>
     <span class="top-c-c">&nbsp|&nbsp</span>
     <c:if test="${empty sessionScope.user}">
-        <a href="login.jsp" class="top-login">请登录</a>
-        <a href="#" class="top-sign">&nbsp请注册</a>
+        <span><a href="login.jsp" class="top-login">请登录</a></span>
+        <span><a href="#" class="top-sign">&nbsp请注册</a></span>
     </c:if>
     <%--TODO 导航栏--%>
     <ul class="top-nav">
-        <a href="index.jsp">首页</a><%--    可以搞个图标--%>
+        <span><a href="index.jsp">首页</a></span><%--    可以搞个图标--%>
         <a href="client/cart.jsp">购物车</a>
         <a href="client/order.jsp">订单</a>
         <a href="client/user.jsp">个人中心</a>

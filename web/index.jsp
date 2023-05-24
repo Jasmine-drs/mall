@@ -23,8 +23,13 @@
 <div>
 <jsp:include page="header.jsp" />
 </div>
+<%--中间部分+商品列表--%>
+<div class="center-shoppinglist">
+<%--中间部分--%>
+<div class="center">
 <!-- 商品种类菜单栏 -->
-<div>
+<div class="types">
+    <span class="types-h2"><h2>&nbsp分类</h2></span>
 <ul>
     <li><a href="${pageContext.request.contextPath}/category/all?categoryId=1">电脑/配件</a></li>
     <li><a href="client/category.jsp?category=2">手机/配件</a></li>
@@ -33,7 +38,8 @@
     <li><a href="client/category.jsp?category=5">家电产品</a></li>
 </ul>
 </div>
-<div class="container">
+<%--    中央轮播图--%>
+<div class="container" id="container">
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         <ol class="carousel-indicators">
             <%--这里添加图片列表--%>
@@ -64,8 +70,12 @@
         </a>
     </div>
 </div>
-
-
+<%--    登录显示--%>
+    <div></div>
+</div>
+<%--    商品列表--%>
+    <div></div>
+</div>
 </body>
 </html>
 

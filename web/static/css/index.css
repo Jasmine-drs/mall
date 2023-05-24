@@ -1,20 +1,32 @@
 body {
     font-family: Arial, sans-serif;
 }
-
+.center-shoppinglist{
+    margin-left: 120px;
+    margin-right: 120px;
+    width: auto;
+    height: 2000px;
+    border-radius: 20px;
+    background-color:#ffda6a;
+}
 h1 {
     color: #333;
 }
 
 ul {
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
-li {
+.types li {
     display: inline-block;
-    margin-right: 10px;
+    text-align: center;
+    height: 50px;
+    width: 100px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 li a {
@@ -47,4 +59,25 @@ li a:hover {
 
 .user-avatar:hover .dropdown-menu {
     display: block;
+}
+.center{
+    margin-top: 10px;
+}
+.types{
+    float: left;
+    padding-right: 100px;
+    width: 300px;
+    height: 400px;
+    padding-top: 20px;
+}
+.types-h2{
+    text-align: center;
+    color: #000000;
+}
+#container{
+    margin-top: 50px;
+    float: left;
+    width: 600px;
+    height: 400px;
+    padding-top: 50px;
 }
