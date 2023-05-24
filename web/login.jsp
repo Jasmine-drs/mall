@@ -26,7 +26,7 @@
             <div class="formBx">
                 <form action="${pageContext.request.contextPath}/login" method="post">
                     <h1>登录</h1>
-                    <input type="text" id="user_id" name="user_id" placeholder="帐号">
+                    <input type="text" id="account" name="account" placeholder="帐号">
                     <input type="password" id="password" name="password" placeholder="密码">
                     <input type="submit" name="" value="登录">
                     <p class="signup">没有账号？<a href="#" onclick="topggleForm();">注册</a></p>
@@ -36,11 +36,11 @@
     <!--注册-->
         <div class="user singupBx">
             <div class="formBx">
-                <form action="${pageContext.request.contextPath}/login" method="post">
+                <form action="${pageContext.request.contextPath}/regist" method="post">
                     <h1>注册</h1>
                     <input type="text" id="username" name="username" placeholder="请输入用户名">
                     <input type="password" id="pwd" name="password" placeholder="请输入密码">
-                    <input type="password" id="second-pwd" name="second-pwd" placeholder="请再次输入密码">
+                    <input type="password" id="second_pwd" name="second_pwd" placeholder="请再次输入密码">
                     <input type="text" id="phone" name="phone" placeholder="手机号码">
                     <input type="text" id="address" name="address" placeholder="收货地址">
                     <input type="submit" name="" value="注册">
